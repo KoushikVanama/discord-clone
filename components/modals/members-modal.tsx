@@ -76,7 +76,7 @@ export const MembersModal = () => {
 
   const onRoleChange = async (memberId: string, role: MemberRole) => {
     try {
-      console.log("HI fuck");
+      console.log("HI");
       setLoadingId(memberId);
       const url = qs.stringifyUrl({
         url: `/api/members/${memberId}`,
