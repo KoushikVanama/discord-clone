@@ -30,7 +30,6 @@ export const ServerHeader = ({ server, role }: ServerHeaderProps) => {
   const { onOpen } = useModal();
   const isAdmin = role === MemberRole.ADMIN;
   const isModerator = isAdmin || role === MemberRole.MODERATOR;
-  console.log(server, role, "server-header.tsx");
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="focus:outline-none" asChild>
