@@ -12,7 +12,6 @@ const ServerIdLayout = async ({
   params: { serverId: string };
 }) => {
   const profile = await currentProfile()!;
-  console.log(params, "params");
   if (!profile) {
     redirectToSignIn();
   }

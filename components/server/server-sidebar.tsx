@@ -36,7 +36,7 @@ const ServerSideBar = async ({ serverId }: ServerSidebarProps) => {
   if (!profile) {
     return redirect("/");
   }
-  console.log(serverId, "server-sidebar.tsx");
+
   const server = await db.server.findUnique({
     where: {
       id: serverId,
@@ -136,9 +136,9 @@ const ServerSideBar = async ({ serverId }: ServerSidebarProps) => {
               {textChannels.map((channel) => (
                 <ServerChannel
                   key={channel.id}
-                  server={server}
                   channel={channel}
                   role={role}
+                  server={server}
                 />
               ))}
             </div>
@@ -156,9 +156,9 @@ const ServerSideBar = async ({ serverId }: ServerSidebarProps) => {
               {audioChannels.map((channel) => (
                 <ServerChannel
                   key={channel.id}
-                  server={server}
                   channel={channel}
                   role={role}
+                  server={server}
                 />
               ))}
             </div>
@@ -176,9 +176,9 @@ const ServerSideBar = async ({ serverId }: ServerSidebarProps) => {
               {videoChannels.map((channel) => (
                 <ServerChannel
                   key={channel.id}
-                  server={server}
                   channel={channel}
                   role={role}
+                  server={server}
                 />
               ))}
             </div>
